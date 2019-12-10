@@ -6,6 +6,7 @@
         <groupId>com.example</groupId>
         <artifactId>spring-cloud-pom</artifactId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../spring-cloud-pom/pom.xml</relativePath>
     </parent>
 
     <groupId>com.example</groupId>
