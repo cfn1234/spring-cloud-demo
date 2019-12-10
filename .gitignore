@@ -1,3 +1,11 @@
+
+.idea/compiler.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/spring-cloud-demo.iml
+.idea/vcs.xml
+.idea/workspace.xml
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -14,7 +22,7 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -29,3 +37,4 @@ build/
 
 ### VS Code ###
 .vscode/
+
