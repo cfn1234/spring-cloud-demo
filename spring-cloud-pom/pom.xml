@@ -18,8 +18,8 @@
 
     <modules>
         <module>../service-api</module>
-        <module>../service</module>
-        <module>../eurekaserver</module>
+        <module>../consumers</module>
+        <module>../eurekaServer</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
