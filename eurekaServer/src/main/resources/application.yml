@@ -1,5 +1,7 @@
 server:
   port: 8761
+  display-name: eurekas
+  context-path: /
 
 eureka:
   instance:

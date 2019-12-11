@@ -1,9 +1,15 @@
 server:
   port: 8081
+  servlet:
+    context-path: / #访问路径
 spring:
   application:
     name: spring-cloud-consumers
 eureka:
+  instance: #实例
+    prefer-ip-address: true #是否使用IP地址进行访问
+    #实例显示名
+    instanceId: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
