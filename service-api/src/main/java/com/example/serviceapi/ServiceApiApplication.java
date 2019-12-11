@@ -2,13 +2,14 @@ package com.example.serviceapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author cfn
  */
 @SpringBootApplication
-@RestController
+@EnableEurekaClient
 public class ServiceApiApplication {
 
     public static void main(String[] args) {

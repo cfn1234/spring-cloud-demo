@@ -1,8 +1,9 @@
 package com.example.service.api;
 
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * com.example.service.api
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author caofengnian
  * @Date 2019-12-10
  */
-@FeignClient("service-api")
+@FeignClient(value = "eureka-provider")
 public interface HiFeignService {
 
     /**
@@ -21,6 +22,6 @@ public interface HiFeignService {
      * @param name
      * @return
      */
-    @RequestMapping("provider/{name}/hi")
-    String getHiFeign(@PathVariable(value = "name") String name);
+    @RequestMapping(value = "provider/hi", method = RequestMethod.GET)
+    String getHiFeign(@RequestParam(value = "name") String name);
 }
