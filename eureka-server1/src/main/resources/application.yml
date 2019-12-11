@@ -6,10 +6,10 @@ spring:
     name: app-eureka-center
   security:
     basic:
-      enabled: true               # 开启基于HTTP basic的认证
+      enabled: true
     user:
-      name: user                  # 配置登录的账号是user
-      password: password123       # 配置登录的密码是password123
+      name: user
+      password: password123
 
 eureka:
   instance:
