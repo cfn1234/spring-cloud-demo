@@ -17,7 +17,7 @@
     <description>Demo project for Spring Boot</description>
 
     <modules>
-        <module>../service-api</module>
+        <module>../provider</module>
         <module>../consumers</module>
         <module>../eurekaServer</module>
     </modules>
