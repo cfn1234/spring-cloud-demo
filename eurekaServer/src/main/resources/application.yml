@@ -1,21 +1,3 @@
-server:
-  port: 8761
-
 spring:
-  application:
-    name: app-eureka-center
-  security:
-    basic:
-      enabled: true               # 开启基于HTTP basic的认证
-    user:
-      name: user                  # 配置登录的账号是user
-      password: password123       # 配置登录的密码是password123
-
-eureka:
-  instance:
-    hostname: server
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://user:password123@server1:8764/eureka/
+  profiles:
+    active: server1
