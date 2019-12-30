@@ -1,15 +1,27 @@
 spring:
   application:
     name: eureka-provider #服务名
+  boot:
+    admin:
+      client:
+        url: http://localhost:8769
 server:
   port: 8762 #服务访问端口
   servlet:
     context-path: / #访问路径
 eureka:
   instance: #Eureka 实例
-    prefer-ip-address: true #是否使用IP地址进行访问
+    prefer-ip-address: on #是否使用IP地址进行访问
     #实例显示名
     instanceId: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@
   client:
     serviceUrl:
       defaultZone: http://user:password123@192.168.3.86:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS

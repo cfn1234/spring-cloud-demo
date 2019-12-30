@@ -7,7 +7,7 @@ spring:
     name: spring-cloud-consumers
 eureka:
   instance: #实例
-    prefer-ip-address: true #是否使用IP地址进行访问
+    prefer-ip-address: on #是否使用IP地址进行访问
     #实例显示名
     instanceId: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@
   client:
