@@ -1,9 +1,12 @@
 package com.example.service.api;
 
+import com.example.dto.UserDto;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Map;
 
 /**
  * com.example.service.api
@@ -11,8 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author caofengnian
  * @Date 2019-12-10
  */
+
 @FeignClient(value = "eureka-provider")
-public interface HiFeignService {
+public interface UserFeignService {
 
     /**
      * 调用"service-api"服务下的"provider/{name}/hi"接口
@@ -22,6 +26,7 @@ public interface HiFeignService {
      * @param name
      * @return
      */
-    @RequestMapping(value = "provider/hi", method = RequestMethod.GET)
-    String getHiFeign(@RequestParam(value = "name") String name);
+    @PostMapping("/user/getUser")
+    Map<String, Object> getUser(@RequestParam(value = "name") String name, @RequestBody UserDto dto);
+
 }

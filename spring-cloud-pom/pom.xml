@@ -20,6 +20,9 @@
         <module>../provider</module>
         <module>../consumers</module>
         <module>../eurekaServer</module>
+        <module>../restTemplate</module>
+        <module>../admin-server</module>
+        <module>../spring-cloud-commn</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>

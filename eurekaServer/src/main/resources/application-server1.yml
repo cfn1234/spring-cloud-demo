@@ -15,7 +15,7 @@ eureka:
   instance:
     hostname: server
   client:
-    registerWithEureka: true
-    fetchRegistry: true
+    registerWithEureka: false
+    fetchRegistry: false
     serviceUrl:
-      defaultZone: http://user:password123@server1:8764/eureka/
+      defaultZone: http://server:8761/eureka/

@@ -1,12 +1,15 @@
 package com.example.service.controller;
 
-import com.example.service.api.HiFeignService;
+import com.example.dto.UserDto;
+import com.example.service.api.UserFeignService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
 
 /**
  * com.example.service.controller
@@ -24,14 +27,18 @@ public class ConsumerFeignController {
      * 注入微服务Feign Client接口
      */
     @Autowired
-    private HiFeignService hiFeignService;
+    private UserFeignService hiFeignService;
+
 
     @RequestMapping("getHiFeign/{name}")
-    public String getHiFeign(@PathVariable String name) {
-        logger.info("*********getHiFeign name:{}",name);
+    public Map<String, Object> getHiFeign(@PathVariable String name) {
+        logger.info("*********getHiFeign name:{}", name);
         //调用微服务接口
-        String msg=hiFeignService.getHiFeign(name);
-        logger.info("*********getHiFeign msg:{}",msg);
+        UserDto userDto = new UserDto();
+        userDto.setId(11);
+        userDto.setName("hai");
+        Map<String, Object> msg = hiFeignService.getUser(name, userDto);
+        logger.info("*********getHiFeign msg:{}", msg);
         return msg;
     }
 }
