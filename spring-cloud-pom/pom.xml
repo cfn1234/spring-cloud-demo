@@ -23,6 +23,7 @@
         <module>../restTemplate</module>
         <module>../admin-server</module>
         <module>../spring-cloud-commn</module>
+        <module>../springcloud-stream-provider</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
