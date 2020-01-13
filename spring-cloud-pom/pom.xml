@@ -24,6 +24,7 @@
         <module>../admin-server</module>
         <module>../spring-cloud-commn</module>
         <module>../springcloud-stream-provider</module>
+        <module>../spring-stream-consumers</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>

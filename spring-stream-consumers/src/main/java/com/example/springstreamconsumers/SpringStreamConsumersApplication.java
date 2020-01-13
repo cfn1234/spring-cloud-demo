@@ -1,17 +1,13 @@
-package com.example;
+package com.example.springstreamconsumers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
-/**
- * @author cfn
- */
 @SpringBootApplication
-public class StreamProviderApplication {
-	
+public class SpringStreamConsumersApplication {
+
 	public static void main(String[] args) {
-		SpringApplication.run(StreamProviderApplication.class, args);
+		SpringApplication.run(SpringStreamConsumersApplication.class, args);
 	}
-	
+
 }
