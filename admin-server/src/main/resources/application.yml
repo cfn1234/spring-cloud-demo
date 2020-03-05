@@ -3,3 +3,8 @@ spring:
     name: admin-server
 server:
   port: 8769
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
