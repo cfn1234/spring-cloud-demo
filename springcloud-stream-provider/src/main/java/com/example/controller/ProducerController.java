@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProducerController {
 	@Autowired
 	private SendService service;
-	
+
 	@RequestMapping(value = "/send/{msg}", method = RequestMethod.GET)
 	public void send(@PathVariable("msg") String msg){
 		service.sendMessage(msg);
 	}
-
+	
 }
