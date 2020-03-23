@@ -20,7 +20,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://user:password123@localhost:8761/eureka/
-
+      #拉服务列表时间间隔
+    registry-fetch-interval-seconds: 5
 logging:
   level:
     root: Debug
@@ -33,4 +34,6 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+ribbon:
+  ServerListRefreshInterval: 5000
 

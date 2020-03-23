@@ -2,15 +2,15 @@ package com.example.adminserver;
 
 import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author caofengnian
  */
-@Configuration
-@EnableAutoConfiguration
+@SpringBootApplication
 @EnableAdminServer
+@EnableDiscoveryClient
 public class AdminServerApplication {
 
 	public static void main(String[] args) {

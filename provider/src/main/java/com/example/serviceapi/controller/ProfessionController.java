@@ -1,10 +1,7 @@
 package com.example.serviceapi.controller;
 
 import com.example.dto.ProfessionDto;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,7 +15,7 @@ import java.util.Map;
 public class ProfessionController {
 
     @PostMapping("/getProfession")
-    public Map<String, Object> getProfession(String name, @RequestBody ProfessionDto professionDto) {
+    public Map<String, Object> getProfession(@RequestParam String name, @RequestBody ProfessionDto professionDto) {
         Map<String, Object> map = new HashMap<>();
         map.put("name", name);
         map.put("professionDto", professionDto);
