@@ -2,8 +2,6 @@ spring:
   application:
     name: input-demo
   cloud:
-    instance-count: 1
-    instance-index: 0
     stream:
       kafka:
         binder:
@@ -12,8 +10,11 @@ spring:
           auto-create-topics: true
       bindings:
         input:
-          destination: test
+          destination: new2
+          group: input-group-2
           consumer:
             autoCommitOffset: false
             concurrency: 1
-            partitioned: false
+            partitioned: true
+      #instance-count: 2
+

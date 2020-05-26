@@ -1,4 +1,4 @@
-package com.example.springstreamconsumers.sink;
+package com.example.service.sink;
 
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
@@ -17,9 +17,8 @@ import org.springframework.messaging.Message;
 public class MsgSink {
 	
 	@StreamListener(Sink.INPUT)
-	public void process(Message<?> message) throws InterruptedException {
+	public void process(Message<?> message) {
 		System.out.println(message.getPayload());
-		Thread.sleep(2000);
 		Acknowledgment acknowledgment = message.getHeaders().get(KafkaHeaders.ACKNOWLEDGMENT, Acknowledgment.class);
 		if (acknowledgment != null) {
 			System.out.println("Acknowledgment provided");
