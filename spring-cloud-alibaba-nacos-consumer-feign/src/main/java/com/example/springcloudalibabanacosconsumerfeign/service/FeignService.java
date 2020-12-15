@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @date: 2020/12/14 15:00
  * @description:
  */
-@FeignClient(value = "nacos-provider")
+@FeignClient(value = "nacos-provider",fallback = FallbackServiceImpl.class)
 public interface FeignService {
 
 	@GetMapping(value = "/echo/{string}")
