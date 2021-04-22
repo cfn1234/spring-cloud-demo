@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author admin
  */
@@ -22,6 +25,10 @@ public class NacosProviderDemoApplication {
 		SpringApplication.run(NacosProviderDemoApplication.class, args);
 	}
 
+	/**
+	 * @param applicationName
+	 * @return
+	 */
 	@Bean
 	MeterRegistryCustomizer<MeterRegistry> configurer(
 			@Value("${spring.application.name}") String applicationName) {
@@ -32,8 +39,10 @@ public class NacosProviderDemoApplication {
 	public class EchoController {
 
 		@GetMapping(value = "/echo/{string}")
-		public String echo(@PathVariable String string) {
-			return "Hello Nacos Discovery " + string;
+		public Map<String, String> echo(@PathVariable String string) {
+			Map<String, String> map = new HashMap<>();
+			map.put("add", string);
+			return map;
 		}
 	}
 }

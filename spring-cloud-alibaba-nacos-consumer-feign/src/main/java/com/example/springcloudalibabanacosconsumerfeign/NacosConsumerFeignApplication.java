@@ -8,10 +8,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-public class SpringCloudAlibabaNacosConsumerFeignApplication {
+public class NacosConsumerFeignApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringCloudAlibabaNacosConsumerFeignApplication.class, args);
+		SpringApplication.run(NacosConsumerFeignApplication.class, args);
 	}
 
 }

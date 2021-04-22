@@ -22,8 +22,6 @@
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
 		</dependency>
-
-
 		<!--spring web-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

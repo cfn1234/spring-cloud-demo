@@ -28,6 +28,7 @@
         <module>../spring-function</module>
         <module>../nacos</module>
         <module>../spring-cloud-alibaba-nacos-consumer-feign</module>
+        <module>../spring-cloud-gateway</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>

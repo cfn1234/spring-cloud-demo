@@ -6,12 +6,11 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 192.168.0.62:8848
       config:
         file-extension: yaml
         name: application-nacos.yml
-        server-addr:
-
+        server-addr: 192.168.0.62:8848
 management:
   endpoints:
     web:

@@ -6,15 +6,9 @@ spring:
       kafka:
         binder:
           brokers: 192.168.6.150:9092
-          auto-add-partitions: true
-          auto-create-topics: true
       bindings:
         input:
-          destination: new2
-          group: input-group-2
-          consumer:
-            autoCommitOffset: false
-            concurrency: 1
-            partitioned: true
-      #instance-count: 2
-
+          destination: cfn
+          group: cfn
+      instance-count: 2
+      instance-index: 0
